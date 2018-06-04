@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Initiation Bootstrap 4 : accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- tout le contenue d'une page bootstrap est dans une div class container -->
+    <div class="container">
+        <!-- Une navbar faite avec bootstrap -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-danger"> <!-- la nav est class navbar sur fond sombre, avec un bg et s'étant sur un lg un écran large -->
+        <a href="index.html" class="navbar-brand">InitiationBootstrap 4</a>
+        <!-- le bouton pour le menu responsive -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- la ul est dans une div avec class et id -->
+                <ul class="navbar-nav ml-auto"> <!-- navbar-nav supprime les puces ml-auto empêcher le débordement de la navbar-->
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">A propos de nous</a></li>
+                    <!-- ici nous mettons un menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produits</a>
+                        <!-- les sous-rubriques de la rubrique produits dans un div class dropdown-menu -->
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Produit 1</a>
+                            <a href="#" class="dropdown-item">Produit 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Produit 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+           </div>
+       </nav>
+
+       <!-- ici on va mettre une section en pleine largeur sous la nav "a hero section", chez Bootstrap un "Jumbotron" c'est un composant -->
+       <div class="jumbotron">
+            <h1 class="display-4">À la une lundi 04 juin 2018 : bientôt l'été !!!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatibus soluta nobis, iusto accusantium, et dolore ratione odit omnis illo similique. Ea repudiandae aut assumenda praesentium! Alias deserunt ex minus?</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-danger" role="button">Préparez l'été ...</a>
+            </p>
+       </div> <!-- fin de la div jumbotron -->
+
+       <!-- ici commence la grille de bootstrap avec une rangée et des colonnes : 3 colonnes -->
+       <div class="row">
+           <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2"><!--  col-sm-12 sur un écran small 12 col de largeur, sur un écran medium 6 col de largeur sur un écran lg3 col -->
+               <div class="card mb-4"> 
+                   <div class="card-body text-center">
+                       <h5 class="card-title">Un titre h5 "card" 1</h5>
+                       <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                       <a href="#" class="card-link">Un lien...</a>
+                   </div>
+               </div>
+            </div><!-- fin col 1-->
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Un titre h5 "card" 2</h5>
+                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                        <a href="#" class="card-link">Un lien...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 2-->
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Un titre h5 "card" 3</h5>
+                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                        <a href="#" class="card-link">Un lien...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 3-->
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Un titre h5 "card" 4</h5>
+                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                        <a href="#" class="card-link">Un lien...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 4-->
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Un titre h5 "card" 5</h5>
+                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                        <a href="#" class="card-link">Un lien...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 5-->
+
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Un titre h5 "card" 6</h5>
+                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
+                        <a href="#" class="card-link">Un lien...</a>
+                    </div>
+                </div>
+            </div><!-- fin col 6-->
+        </div>
+
+        <div class="row mt-sm-4 mt-md-0">
+           <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
+               <h3>Un titre 3</h3>
+               <p class="lead">Un paragraphe class lead</p> <!-- la class lead viens après lead -->
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque voluptate quisquam enim! Repellendus, excepturi, sapiente debitis impedit, ex magni obcaecati expedita aperiam velit recusandae distinctio officia laboriosam error voluptatibus voluptatum?</p>
+            </div>
+           <!-- colonne 2 dans la rangée 2 -->
+            <div class="col-sm-12 col-md-4">
+               <h3>Menu secondaire</h3>
+               <!-- une navigation verticlae -->
+               <ul class="nav flex-column nav-pills">
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link active">Accueil</a>
+                    </li>
+                    
+                   <li class="nav-item">
+                       <a href="#" class="nav-link">Vidéos</a>
+                    </li>
+
+                   <li class="nav-item">
+                       <a href="#" class="nav-link">Actu</a>
+                    </li>
+
+                   <li class="nav-item">
+                       <a href="#" class="nav-link">Forum</a>
+                    </li>
+               </ul>
+            </div>
+        </div><!-- fin de la nouvelle rangée la rangée 2 -->
+
+        <!-- row 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3>A découvrir</h3>
+                <ul class="nav">
+                    <li class="nav-item"><a href="https://www.youtube.com/watch?v=p1P6nQox3Lc" class="nav-link" target="_blank" role="button"><h4>Berserk</h4></a><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet expedita hic rerum aut possimus dignissimos minus est, unde, autem ea perspiciatis corporis, alias inventore facere nihil necessitatibus nam omnis ipsam.</p></li>
+                    <li class="nav-item"><a href="https://www.youtube.com/watch?v=RvJWwAlrqRA" class="nav-link" target="_blank" role="button"><h4>Hunter x Hunter</h4></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor magni deleniti consectetur consequatur explicabo! Beatae cum unde eligendi. At tempora ducimus blanditiis consectetur culpa harum enim non alias quas officiis.</p></li>
+                    <li class="nav-item"><a href="https://www.youtube.com/watch?v=TsOoUVvRD20" class="nav-link" target="_blank" role="button"><h4>One Punch Man</h4></a><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit labore minus id obcaecati error eaque ratione autem quos asperiores sapiente facilis commodi dolorum facere in, molestias distinctio enim voluptas suscipit!</p></li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Synopsis</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolore atque voluptates porro incidunt voluptatem velit ex doloremque quidem mollitia sapiente iure, tempore nulla quibusdam at non distinctio eaque commodi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div> <!-- fin de la class container 1 -->
+    <footer class="mt-4"> <!-- mt=margin -->
+        <div class="container bg-danger">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card-footer text-center text-white">
+                        <div class="card-body">
+                            <p class="card-text">hello world</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- optional javascript -->
+    <!-- jquery first, then popper.js, then bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
