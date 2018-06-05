@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Initiation Bootstrap 4 : accueil</title>
+    <title>Initiation Bootstrap 4 : diaporama</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,8 +21,8 @@
         </button>
            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- la ul est dans une div avec class et id -->
                 <ul class="navbar-nav ml-auto"> <!-- navbar-nav supprime les puces ml-auto empêcher le débordement de la navbar-->
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li class="nav-item"><a href="diaporama.html" class="nav-link">Diaporama</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="diaporama.html" class="nav-link active">Diaporama</a></li>
                     <!-- ici nous mettons un menu déroulant -->
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produits</a>
@@ -41,93 +41,79 @@
 
        <!-- ici on va mettre une section en pleine largeur sous la nav "a hero section", chez Bootstrap un "Jumbotron" c'est un composant -->
        <div class="jumbotron">
-            <h1 class="display-4">À la une lundi 04 juin 2018 : bientôt l'été !!!</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatibus soluta nobis, iusto accusantium, et dolore ratione odit omnis illo similique. Ea repudiandae aut assumenda praesentium! Alias deserunt ex minus?</p>
+            <h1 class="display-4">Plus belles destinations de vacances</h1>
+<!--             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptatibus soluta nobis, iusto accusantium, et dolore ratione odit omnis illo similique. Ea repudiandae aut assumenda praesentium! Alias deserunt ex minus?</p>
             <p class="lead">
-                <a href="#" class="btn btn-lg btn-danger" role="button">Préparez l'été ...</a>
-            </p>
+                <a href="#" class="btn btn-lg btn-danger" role="button">Préparez l'été ...</a> 
+            </p>-->
        </div> <!-- fin de la div jumbotron -->
+       <div class="row">
+            <div class="col">
+                <div id="carousel01" class="carousel slide" data-ride="carousel"><!-- le diaporama est dans une div avec un id et sa classe et data-ride-->
+                    <!-- ici on place les indicateur -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel01" data-slide-to="1"></li>
+                        <li data-target="#carousel01" data-slide-to="2"></li>
+                    </ol>
+                   <div class="carousel-inner"><!-- tous les items du diaporama sont dans une div avec la classe  carousel-inner > interne -->
+                        <div class="carousel-item active">
+                            <img class="w-100 d-block" src="img/panorama.jpg" alt="panorama">
+                            <!-- et ici la légende de la photo -->
+                            <div class="carousel-caption d-none d-md-block gris">
+                                <h5>Le port de Porte-Pollo</h5>
+                                <p>En été, le port est magnifique</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 d-block" src="img/1000x370_3_schwyz_ivan_mythen_grund.jpg" alt="montagne">
+                            <div class="carousel-caption d-none d-md-block gris">
+                                <h5>La montagne suisse</h5>
+                                <p>Courir dans les alpages avec les vaches</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/location-porto-vecchio-corse-3.jpg" alt="plage">
+                            <div class="carousel-caption d-none d-md-block gris">
+                                <h5>La plage de Porto-Vecchio</h5>
+                                <p>En été, la plage est magnifique</p>
+                            </div>
+                        </div>
+                   </div>
+                   <!-- ici nous plaçons les liens de contrôles du diaporama -->
+                   <a href="#carousel01" role="button" class="carousel-control-prev" data-slide="prev">
+                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Précédent</span>
+                   </a><!-- sr=screen readers -->
+                   <a href="#carousel01" role="button" class="carousel-control-next" data-slide="next">
+                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Suivant</span>
+                   </a>
+                </div>
+            </div>
+       </div>
 
        <!-- ici commence la grille de bootstrap avec une rangée et des colonnes : 3 colonnes -->
-       <div class="row">
-           <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2"><!--  col-sm-12 sur un écran small 12 col de largeur, sur un écran medium 6 col de largeur sur un écran lg3 col -->
-               <div class="card mb-4"> 
-                   <div class="card-body text-center">
-                       <h5 class="card-title">Un titre h5 "card" 1</h5>
-                       <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                       <a href="#" class="card-link">Un lien...</a>
-                   </div>
-               </div>
-            </div><!-- fin col 1-->
-
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Un titre h5 "card" 2</h5>
-                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                        <a href="#" class="card-link">Un lien...</a>
-                    </div>
-                </div>
-            </div><!-- fin col 2-->
-
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Un titre h5 "card" 3</h5>
-                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                        <a href="#" class="card-link">Un lien...</a>
-                    </div>
-                </div>
-            </div><!-- fin col 3-->
-
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Un titre h5 "card" 4</h5>
-                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                        <a href="#" class="card-link">Un lien...</a>
-                    </div>
-                </div>
-            </div><!-- fin col 4-->
-
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Un titre h5 "card" 5</h5>
-                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                        <a href="#" class="card-link">Un lien...</a>
-                    </div>
-                </div>
-            </div><!-- fin col 5-->
-
-            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-2">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Un titre h5 "card" 6</h5>
-                        <p class="card-text">Un petit text dans une "carte" "a card"</p>
-                        <a href="#" class="card-link">Un lien...</a>
-                    </div>
-                </div>
-            </div><!-- fin col 6-->
-        </div>
 
         <div class="row mt-sm-4 mt-md-0">
-           <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
+            <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
                <h3>Un titre 3</h3>
                <p class="lead">Un paragraphe class lead</p> <!-- la class lead viens après lead -->
                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque voluptate quisquam enim! Repellendus, excepturi, sapiente debitis impedit, ex magni obcaecati expedita aperiam velit recusandae distinctio officia laboriosam error voluptatibus voluptatum?</p>
             </div>
+        
+
            <!-- colonne 2 dans la rangée 2 -->
             <div class="col-sm-12 col-md-4">
                <h3>Menu secondaire</h3>
                <!-- une navigation verticlae -->
                <ul class="nav flex-column nav-pills">
                    <li class="nav-item">
-                       <a href="index.html" class="nav-link active">Accueil</a>
+                       <a href="index.html" class="nav-link">Accueil</a>
                     </li>
                     
                    <li class="nav-item">
-                       <a href="diaporama.html" class="nav-link">Diaporama</a>
+                       <a href="diaporama.html" class="nav-link active">Diaporama</a>
                     </li>
 
                    <li class="nav-item">
@@ -141,6 +127,33 @@
             </div>
         </div><!-- fin de la nouvelle rangée la rangée 2 -->
 
+        <div class="row">
+            <div class="col-3">
+                <img src="img/image1.jpg" alt="peinture" class="img-thumbnail">
+            </div>
+            <div class="col-3">
+                <img src="img/image1.jpg" alt="peinture" class="img-thumbnail">
+            </div>
+            <div class="col-3">
+                <img src="img/image1.jpg" alt="peinture" class="img-thumbnail">
+            </div>
+            <div class="col-3">
+                <img src="img/image1.jpg" alt="peinture" class="img-thumbnail">
+            </div>
+
+            <div class="col-6">
+                <img src="img/images2.jpg" alt="europe" class="rounded float-left img-thumbnail">
+            </div>
+            <div class="col-6">
+                <img src="img/image3.jpg" alt="fillaments" class="rounded float-right img-thumbnail">
+            </div>
+            <div class="col-12">
+                <img src="img/images4.jpg" alt="soleil" class="rounded mx-auto d-block">
+            </div>
+            <div class="col-12">
+                <img src="img/bleach.jpg" alt="bleach" class="rounded img-fluid" alt="Responsive image">
+            </div>
+        </div>
         <!-- row 3 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <div class="row">
             <div class="col-md-6 col-sm-12">

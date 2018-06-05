@@ -1,5 +1,5 @@
 body{
-    background:aliceblue;
+    background:whitesmoke;
     color: #333;
 }
 .orange{
@@ -7,4 +7,7 @@ body{
 }
 .bleu{
     background: lightblue;
+}
+.gris{
+    background: rgba(59, 53, 149, 0.3)
 }
